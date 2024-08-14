@@ -12067,4 +12067,59 @@ body {
   font-weight: bold;
 }
 
+.choose {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  justify-content: center;
+  justify-items: center;
+  background-color: #f2f2f2;
+  padding: 9vh 2vw;
+  margin-top: 5vh;
+}
+.choose .choose-yummy {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  width: 25vw;
+  background-color: #ce1212;
+  color: #fff;
+  padding: 4vh 3vw;
+}
+.choose .choose-yummy .lead {
+  text-align: center;
+}
+.choose .choose-yummy .lead a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1vh 2vw;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2470588235);
+}
+.choose .choose-yummy .lead a:hover {
+  background-color: #ffffff;
+  color: #ce1212;
+  font-weight: bold;
+}
+.choose .iconChoose {
+  background-color: #fff;
+  width: 18vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  text-align: center;
+  padding: 2vh 2vw;
+  padding-top: 10vh;
+}
+.choose .iconChoose .icon i {
+  font-size: xx-large;
+  color: #ce1212;
+}
+.choose .iconChoose .icon i:hover {
+  color: #fff;
+  background-color: #ce1212;
+  border-radius: 50%;
+  padding: 1.5vh 1.5vw;
+}
+
 /*# sourceMappingURL=app.css.map */
