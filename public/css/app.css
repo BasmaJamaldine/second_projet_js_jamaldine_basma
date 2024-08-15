@@ -12188,11 +12188,17 @@ body {
   color: #d33333;
   font-size: xx-large;
 }
-.home .home-right img {
-  transition: transform 0.4s ease;
+@keyframes up-down {
+  to {
+    transform: translateY(-25px);
+  }
 }
-.home .home-right img:hover {
-  transform: translateY(-30px);
+.home img {
+  box-sizing: border-box;
+  animation-name: up-down;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .about {
@@ -12305,7 +12311,7 @@ body {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-image: url(./public/images/stats.jpg) !important;
+  background-image: url(../images/stats.jpg);
   position: relative;
   background-size: 100% 100%;
   width: 100%;
@@ -12320,11 +12326,25 @@ body {
   background: rgba(0, 0, 0, 0.278);
 }
 
-.stat h2, .stat .h2 {
+.content-stat {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 9vw;
+}
+.content-stat .stat {
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.content-stat .stat h2, .content-stat .stat .h2 {
   font-size: 60px;
   color: white;
 }
-.stat p {
+.content-stat .stat p {
   color: #c2b6a6;
   font-weight: bold;
 }
@@ -12428,6 +12448,45 @@ body {
 
 .carousel-indicator.active {
   background: white;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 11vh;
+}
+.table p {
+  text-align: center;
+}
+.table h2 span, .table .h2 span {
+  color: #ce1212;
+}
+
+.table-row {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+}
+.table-row .table-right {
+  background-color: #f8f8f8;
+}
+.table-row .table-right .form-group {
+  background-color: #f8f8f8;
+  padding: 12vh 1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.table-row .table-right .form-group .form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.table-row .table-right .form-group .form-row input {
+  padding: 1vh 2vw;
 }
 
 .footer {
