@@ -1,74 +1,63 @@
-.menu
-    display: flex
-    flex-direction: row
-    gap: 4vh
-    justify-content: center
-    align-items: center
-    padding-top: 10vh
+.menu-rest
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding-top: 5vh
+  p
+    color: #0000008f
+    font-weight: bold
+  h2
+    padding-bottom: 6vh
     span
-        color: #df4e4f
-.nav
+      color: #d11212
+  .btnRest
     display: flex
     flex-direction: row
-    justify-content: center
-    align-items: center
-    li
-        button
-            color: #000
-            text-decoration: none
-            // border-bottom: 2px solid #4e4e4ea8
-            &:hover
-                border-bottom: 2px solid #df4e4f
-                color: #000
-.tab-content
+    gap: 3.5vw
+    padding-bottom: 3vh
+    button
+      border: none
+      background-color: #fff
+      font-size: 20px
+      border-bottom: 2px solid #75747488
+      padding-bottom: 1vh
+      &:hover
+        border-bottom-color: #d11212
+  .content-rest
+    text-align: center
+    padding-top: 3vh
+    h3
+      color: #d11212
+      padding-bottom: 4vh
+  .content-plat
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     text-align: center
-    h4
-        color: #df4e4f
-.carousel 
-  position: relative
-  overflow: hidden
-  width: 100vw
-.carousel-wrapper 
-  display: flex
-  overflow: hidden
-.carousel-content 
-  display: flex
-  transition: transform 0.5s ease
-.carousel-slide 
-  min-width: 33.33% 
-  box-sizing: border-box
-  padding: 10px
-  text-align: center
-.carousel-button 
-  position: absolute
-  top: 50%
-  transform: translateY(-50%)
-  background: rgba(0, 0, 0, 0.5)
-  color: white
-  border: none
-  padding: 10px
-  cursor: pointer
-.carousel-button.prev 
-  left: 10px
-.carousel-button.next 
-  right: 10px
-.carousel-indicators 
-  position: absolute
-  bottom: 10px
-  left: 50%
-  transform: translateX(-50%)
-  display: flex
-  gap: 5px
-.carousel-indicator 
-  width: 10px
-  height: 10px
-  background: rgba(0, 0, 0, 0.5)
-  border-radius: 50%
-  cursor: pointer
-.carousel-indicator.active 
-  background: white
+    gap: 10vh
+    .plat-row
+      display: flex
+      flex-direction: row
+      justify-content: space-evenly
+      gap: 8vw
+      padding-bottom: 1vh
+      p
+        font-weight: normal
+      span
+        font-weight: bold
+        color: #d11212
+        font-size: x-large
+.anim
+  animation: basma 0.9s
+  @keyframes basma
+    0%
+      opacity: 1
+    50%
+      opacity: 0
+    100%
+      opacity: 1
 
+
+      
