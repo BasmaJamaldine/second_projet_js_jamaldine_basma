@@ -12311,7 +12311,7 @@ body {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-image: url(../images/stats.jpg);
+  background-image: url(../images/stats.jpg) !important;
   position: relative;
   background-size: 100% 100%;
   width: 100%;
@@ -12323,7 +12323,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.278);
+  background: rgba(0, 0, 0, 0.616);
 }
 
 .content-stat {
@@ -12468,10 +12468,15 @@ body {
 .table-row {
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  padding: 0px;
+  margin-top: 4vh;
+}
+.table-row .table-left img {
+  padding: 0px;
 }
 .table-row .table-right {
   background-color: #f8f8f8;
+  padding: 1vh 2vw;
 }
 .table-row .table-right .form-group {
   background-color: #f8f8f8;
@@ -12483,10 +12488,26 @@ body {
 .table-row .table-right .form-group .form-row {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 20px;
+}
+.table-row .table-right .form-group .form-row textarea {
+  width: 100%;
+  height: 30vh;
+  padding: 1vh 1.5vw;
 }
 .table-row .table-right .form-group .form-row input {
-  padding: 1vh 2vw;
+  padding: 1vh 1.5vw;
+  width: 15vw;
+}
+.table-row .table-right .bookBtn button {
+  border: none;
+  color: #fff;
+  padding: 2vh 5vw;
+  background-color: #ce2929;
+  border-radius: 5px;
+}
+.table-row .table-right .bookBtn button:hover {
+  background-color: rgba(206, 41, 41, 0.8);
 }
 
 .footer {
