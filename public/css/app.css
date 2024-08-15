@@ -12349,105 +12349,182 @@ body {
   font-weight: bold;
 }
 
-.menu {
+.menu-rest {
   display: flex;
-  flex-direction: row;
-  gap: 4vh;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
-.menu span {
-  color: #df4e4f;
+.menu-rest p {
+  color: rgba(0, 0, 0, 0.5607843137);
+  font-weight: bold;
 }
-
-.nav {
+.menu-rest h2, .menu-rest .h2 {
+  padding-bottom: 6vh;
+}
+.menu-rest h2 span, .menu-rest .h2 span {
+  color: #d11212;
+}
+.menu-rest .btnRest {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  gap: 3.5vw;
+  padding-bottom: 3vh;
 }
-.nav li button {
-  color: #000;
-  text-decoration: none;
+.menu-rest .btnRest button {
+  border: none;
+  background-color: #fff;
+  font-size: 20px;
+  border-bottom: 2px solid rgba(117, 116, 116, 0.5333333333);
+  padding-bottom: 1vh;
 }
-.nav li button:hover {
-  border-bottom: 2px solid #df4e4f;
-  color: #000;
+.menu-rest .btnRest button:hover {
+  border-bottom-color: #d11212;
 }
-
-.tab-content {
+.menu-rest .content-rest {
+  text-align: center;
+  padding-top: 3vh;
+}
+.menu-rest .content-rest h3, .menu-rest .content-rest .h3 {
+  color: #d11212;
+  padding-bottom: 4vh;
+}
+.menu-rest .content-plat {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 10vh;
 }
-.tab-content h4, .tab-content .h4 {
-  color: #df4e4f;
+.menu-rest .content-plat .plat-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 8vw;
+  padding-bottom: 1vh;
+}
+.menu-rest .content-plat .plat-row p {
+  font-weight: normal;
+}
+.menu-rest .content-plat .plat-row span {
+  font-weight: bold;
+  color: #d11212;
+  font-size: x-large;
+}
+
+.anim {
+  animation: basma 0.9s;
+}
+@keyframes basma {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.carousel-container {
+  width: 100vw;
+  height: 80vh;
+  background: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+  padding-top: 10vh;
+}
+.carousel-container h1, .carousel-container .h1 {
+  text-align: center;
+}
+.carousel-container p {
+  text-align: center;
+  opacity: 0.8;
+}
+.carousel-container span {
+  color: #d11212;
 }
 
 .carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-}
-
-.carousel-wrapper {
-  display: flex;
-  overflow: hidden;
-}
-
-.carousel-content {
   display: flex;
   transition: transform 0.5s ease;
 }
-
-.carousel-slide {
-  min-width: 33.33%;
-  box-sizing: border-box;
-  padding: 10px;
-  text-align: center;
+.carousel p {
+  text-align: start;
+  opacity: 1;
 }
 
-.carousel-button {
+.slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4vw;
+}
+.slide .slide-left {
+  border-left: 2px solid #d11212;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: star;
+  width: 50%;
+}
+.slide .tiwtiwat {
+  color: #e08282;
+  font-size: x-large;
+}
+.slide .star {
+  color: #ffc107;
+}
+
+.slide img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.next, .previous {
+  display: none;
+  padding: 1vh 2vw;
+  border-radius: 20px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
 }
 
-.carousel-button.prev {
-  left: 10px;
+.next {
+  right: 0px;
+  display: none;
 }
 
-.carousel-button.next {
-  right: 10px;
+.previous {
+  left: 0;
+  display: none;
 }
 
-.carousel-indicators {
+.indicators-grp {
+  width: 100%;
+  padding: 2vh 0;
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 10%;
   display: flex;
-  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.carousel-indicator {
-  width: 10px;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.5);
+.indicator {
+  padding: 0.5vh 0.5vw;
+  background: #d11212;
   border-radius: 50%;
-  cursor: pointer;
 }
 
-.carousel-indicator.active {
-  background: white;
+.activeIndicator {
+  background-color: rgba(80, 7, 7, 0.4196078431);
 }
 
 .table {
