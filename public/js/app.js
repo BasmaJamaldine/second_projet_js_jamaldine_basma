@@ -218,4 +218,23 @@ document.addEventListener('DOMContentLoaded', function() {
       selector: '.video'
     });
 });
+//* navbar
+let body = document.querySelector("body")
+let Menu = document.querySelector(".menu-icon")
+let navMenu = document.querySelector(".menu-nv")
+let close = document.querySelector(".close")
+
+
+Menu.addEventListener("click", ()=>{
+  navMenu.style.display="flex"
+  body.style.backgroundColor = " #000000bc"
+  close.style.display ="flex"
+  Menu.style.display="none"
+  
+})
+close.addEventListener("click", ()=>{
+   navMenu.style.display="none"
+   close.style.display="none"
+   Menu.style.display="flex"
+})
 
