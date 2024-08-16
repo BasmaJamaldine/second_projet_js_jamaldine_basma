@@ -84,6 +84,8 @@
     flex-direction: column
     justify-content: center 
     padding-top: 5vh
+    padding-bottom: 8vh
+     position: relative
     p,h2
         text-align: center
         span
@@ -159,7 +161,6 @@
     &:focus
         outline: none
 .gallery-controls-previous
-    position: relative
     &::before
         border: solid #000
         border-width: 0 5px 5px 0
@@ -198,14 +199,15 @@
     list-style: none
     padding: 0
     position: absolute
-    bottom: -30px 
+    top: 70vh
+    // left: 50vw
     width: 100%
 .gallery-nav
     li
-    background-color: #ccc
+
     border-radius: 50%
     height: 10px
-    margin: 0 5px
+    // margin: 0 5px
     width: 10px
     cursor: pointer
     transition: background-color 0.3s ease

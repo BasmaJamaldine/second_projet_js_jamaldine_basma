@@ -212,4 +212,10 @@ class Carousel1 {
 
 const exampleCarousel = new Carousel1(galleryContainer, galleryItems, galleryNavContainer)
 exampleCarousel.init()
+//*Vedios
+document.addEventListener('DOMContentLoaded', function() {
+    const addVideo = GLightbox({
+      selector: '.video'
+    });
+});
 

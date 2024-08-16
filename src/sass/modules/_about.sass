@@ -26,8 +26,6 @@
                 color: #d11212
             .para1
                padding-top: 15vh
-            video
-                width: 30vw
         .about-left
             img
                 width: 50vw
@@ -43,4 +41,33 @@
                 p
                     color: #d11212
                     font-weight: bold
+.img-vds
+    position: relative
+    img
+        width: 30vw
+        display: block
+.play-button 
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 76px
+    height: 76px
+    background-color: rgba(255, 0, 0, 0.7) 
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    &::before 
+        content: ''
+        display: block
+        width: 0
+        height: 0
+        border-left: 25px solid #FFF
+        border-top: 15px solid transparent
+        border-bottom: 15px solid transparent
+        margin-left: 8px 
+        
+
    
