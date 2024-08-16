@@ -15,9 +15,8 @@ starBtn.addEventListener("click",()=>{
   palt.classList.add("anim")
   setTimeout(() => {
     palt.classList.remove("anim")
-  }, 1000);
+  }, 1000)
   // console.log(repas);
-  
 })
 brakBtn.addEventListener("click",()=>{
   let repas= document.querySelector("#title")
@@ -106,4 +105,111 @@ containers.forEach(container => {
     });
     indicatorsGrp.querySelector(".indicator").classList.add('activeIndicator')
 });
+
+//?
+let modal = document.getElementById("loginModal");
+let btn = document.getElementById("loginBtn");
+let span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+//* carousel2
+let galleryContainer = document.querySelector(".gallery-container");
+let galleryNavContainer = document.querySelector(".gallery-nav");
+let galleryItems = document.querySelectorAll(".gallery-item");
+
+class Carousel1 {
+    constructor(container, items, nav) {
+        this.carouselContainer = container;
+        this.carouselArray = [...items];
+        this.carouselNav = nav;
+        this.currentItemIndex = 0;
+        this.autoSlideInterval = null;
+    }
+
+    updateGallery() {
+        this.carouselArray.forEach(ele => {
+            ele.classList.remove("gallery-item-1")
+            ele.classList.remove("gallery-item-2")
+            ele.classList.remove("gallery-item-3")
+            ele.classList.remove("gallery-item-4")
+            ele.classList.remove("gallery-item-5")
+            ele.classList.remove("gallery-item-6")
+            ele.classList.remove("gallery-item-7")
+            ele.classList.remove("gallery-item-8")
+        })
+
+        this.carouselArray.slice(0, 8).forEach((ele, i) => {
+            ele.classList.add(`gallery-item-${i + 1}`)
+        })
+
+        this.updateIndicators()
+    }
+
+    updateIndicators() {
+        if (this.carouselNav && this.carouselNav.childNodes.length > 0) {
+            this.carouselNav.childNodes.forEach(indicator => {
+                if (indicator.classList) {
+                    indicator.classList.remove('active')
+                }
+            })
+            if (this.currentItemIndex < this.carouselNav.childNodes.length) {
+                this.carouselNav.childNodes[this.currentItemIndex].classList.add('active')
+            }
+        }
+    }
+
+    setCurrentState(index) {
+        this.currentItemIndex = index
+        this.carouselArray = this.carouselArray.slice(index).concat(this.carouselArray.slice(0, index))
+        this.updateGallery()
+    }
+
+    setIndicators() {
+      while (this.carouselNav.firstChild) {
+          this.carouselNav.removeChild(this.carouselNav.firstChild)
+      }
+  
+      this.carouselArray.forEach((index) => {
+          let li = document.createElement('li')
+          li.addEventListener('click', () => {
+              this.setCurrentState(index)
+              this.stopAutoSlide() 
+          })
+          this.carouselNav.appendChild(li)
+      })
+
+      this.updateIndicators()
+  }
+  
+
+    startAutoSlide() {
+        this.autoSlideInterval = setInterval(() => {
+            this.currentItemIndex = (this.currentItemIndex + 1) % this.carouselArray.length
+            this.setCurrentState(this.currentItemIndex)
+        }, 2000) 
+    }
+
+    stopAutoSlide() {
+        clearInterval(this.autoSlideInterval)
+    }
+
+    init() {
+        this.updateGallery()
+        this.setIndicators()
+        this.startAutoSlide()
+    }
+}
+
+const exampleCarousel = new Carousel1(galleryContainer, galleryItems, galleryNavContainer)
+exampleCarousel.init()
 

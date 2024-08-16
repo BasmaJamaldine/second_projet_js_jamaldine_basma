@@ -26,25 +26,20 @@
                 <a href="">Drop Down</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div class="btn-login">
-                <button modal-data="testModal" class="btn-modal">Se connecter</button>
-                <!-- modal -->
-                <div id="testModal" class="backdrop">
-                    <div class="modal">
-                        <div class="modal-title">
-                            <h2>Se Connecter</h2>
-                        </div>
-
-                        <div class="modal-body">
-                            <input type="text" placeholder="enter Votre Adresse Email">
-                            <input type="password" placeholder="entrer votre mot de passe">
-                        </div>
-
-                        <div class="modal-footer">
-                            <button class="close-modal">connecter</button>
-                        </div>
-
-                    </div>
+            <div class="contact-btn">
+                <button id="loginBtn">Se connecter</button>
+            </div>
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Se connecter</h2>
+                    <form>
+                        <label for="email">Email</label>
+                        <input type="text" id="username" name="username" placeholder="Entrer votre adresee email">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" placeholder="Entrer votre mot de passe">
+                        <button type="submit">Se connecter</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -255,19 +250,15 @@
             <p>TESTIMONIALS</p>
                 <h1>What Are They<span> Saying About Us</span></h1>
             <div class="carousel">
-               
-
-
                 <div class="slide">
-                   
                         <div class="slide-left">
-                            <i class="bi bi-quote quote-icon-left tiwtiwat"></i>
+                            <i class="bi bi-quote quote-icon-left icon-p-caro"></i>
                             <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
                                 rhoncus.
                                 Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at
                                 semper.
                             </p>
-                            <i class="bi bi-quote quote-icon-right tiwtiwat"></i>
+                            <i class="bi bi-quote quote-icon-right icon-p-caro"></i>
                             <h5>Saul Goodman</h5>
                             <P>Ceo &amp; Founder</P>
                             <div>
@@ -280,20 +271,18 @@
                         </div>
                         <div>
                             <img width="180px" src="./public/images/testimonials/testimonials-1.jpg" alt="">
-                        </div>
-                    
+                        </div>  
                 </div>
-
                 <div class="slide">
                    
                         <div class="slide-left">
-                            <i class="bi bi-quote quote-icon-left tiwtiwat"></i>
+                            <i class="bi bi-quote quote-icon-left icon-p-caro"></i>
                             <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
                                 rhoncus.
                                 Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at
                                 semper.
                             </p>
-                            <i class="bi bi-quote quote-icon-right tiwtiwat"></i>
+                            <i class="bi bi-quote quote-icon-right icon-p-caro"></i>
                             <h5>Sara wilsson</h5>
                             <P>Designer</P>
                             <div>
@@ -305,19 +294,16 @@
                         <div>
                             <img width="200px" src="./public/images/testimonials/testimonials-2.jpg" alt="">
                         </div>
-                    
                 </div>
-
                 <div class="slide">
-                   
                         <div class="slide-left">
-                            <i class="bi bi-quote quote-icon-left tiwtiwat"></i>
+                            <i class="bi bi-quote quote-icon-left icon-p-caro"></i>
                             <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
                                 rhoncus.
                                 Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at
                                 semper.
                             </p>
-                            <i class="bi bi-quote quote-icon-right tiwtiwat"></i>
+                            <i class="bi bi-quote quote-icon-right icon-p-caro"></i>
                             <h5>Jana Karlis</h5>
                             <P>Stor&amp; Owner</P>
                             <div>
@@ -329,19 +315,17 @@
                         <div>
                             <img width="200px" src="./public/images/testimonials/testimonials-3.jpg" alt="">
                         </div>
-                    
                 </div>
-
                 <div class="slide">
                    
                         <div class="slide-left">
-                            <i class="bi bi-quote quote-icon-left tiwtiwat"></i>
+                            <i class="bi bi-quote quote-icon-left icon-p-caro"></i>
                             <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
                                 rhoncus.
                                 Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at
                                 semper.
                             </p>
-                            <i class="bi bi-quote quote-icon-right tiwtiwat"></i>
+                            <i class="bi bi-quote quote-icon-right icon-p-caro"></i>
                             <h5>John Larson</h5>
                             <P>Entrepreneur</P>
                             <div>
@@ -353,7 +337,6 @@
                         <div>
                             <img width="200px" src="./public/images/testimonials/testimonials-4.jpg" alt="">
                         </div>
-                    
                 </div>
             </div>
 
@@ -399,6 +382,28 @@
 
 
     </div>
+    <div class="gallerry-title">
+        <p>Gallery</p>
+        <h2>Chek <span>OUR Gallery</span></h2>
+   <div class="gallery">
+        <div>
+        </div>
+        <div class="gallery-container">
+            <img class="gallery-item gallery-item-1" src="./public/images/gallery/gallery-1.jpg" alt="" data-index="1" width="20px">
+            <img class="gallery-item gallery-item-2" src="./public/images/gallery/gallery-2.jpg" alt="" data-index="2" width="20px">
+            <img class="gallery-item gallery-item-3" src="./public/images/gallery/gallery-3.jpg" alt="" data-index="3" width="20px">
+            <img class="gallery-item gallery-item-4" src="./public/images/gallery/gallery-4.jpg" alt="" data-index="4" width="20px">
+            <img class="gallery-item gallery-item-5" src="./public/images/gallery/gallery-5.jpg" alt="" data-index="5" width="20px">
+            <!-- <img class="gallery-item gallery-item-6" src="./public/images/gallery/gallery-6.jpg" alt="" data-index="6">
+            <img class="gallery-item gallery-item-7" src="./public/images/gallery/gallery-7.jpg" alt="" data-index="7"> -->
+            <!-- <img class="gallery-item gallery-item-8" src="./public/images/gallery/gallery-8.jpg" alt="" data-index="8">  -->
+        </div>
+        <div class="gallery-controls"></div>
+        <ul class="gallery-nav"></ul>
+
+    </div>     
+    </div>
+    
     <div class="contact pt-5 d-flex flex-column justify-content-center bg-colorBG">
         <div class="contact-para d-flex flex-column gap-2 justify-content-center align-items-center  text-center ">
             <p class="title">Contact</p>

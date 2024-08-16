@@ -12028,6 +12028,7 @@ textarea.form-control-lg {
 
 body {
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .menu-bar {
@@ -12076,69 +12077,92 @@ body {
   opacity: 1;
   border-bottom: 2px solid #d53535;
 }
-.menu-right .btn-login .btn-modal {
-  background-color: #d53535;
-  color: white;
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 5px;
+  padding-left: 50px;
+}
+.contact-btn button {
+  background: #ce1212;
+  padding: 1vh 3vw;
+  border-radius: 50px;
+  outline: none;
   border: none;
-  border-radius: 19px;
-  padding: 10px 20px;
-  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
 }
-.menu-right .btn-login .btn-modal:hover {
-  background-color: #cf4a4a;
+.contact-btn button:hover {
+  background-color: rgba(250, 52, 52, 0.7450980392);
 }
-.menu-right .btn-login .backdrop {
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(68, 68, 68, 0.103);
-  position: fixed;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  display: none;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.menu-right .btn-login .backdrop .modal {
+
+.modal-content {
   background-color: #fff;
-  width: 30%;
-  height: 42%;
-  margin-top: 5vh;
-  border-radius: 15px;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
 }
-.menu-right .btn-login .backdrop .modal .modal-title {
-  padding: 0 2vw;
-  display: flex;
-  align-items: center;
-  height: 20%;
-  border-bottom: 2px solid #cf4a4a;
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 10px;
 }
-.menu-right .btn-login .backdrop .modal .modal-body {
-  padding: 2vh 4vw;
-}
-.menu-right .btn-login .backdrop .modal .modal-body input {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-.menu-right .btn-login .backdrop .modal .modal-footer {
-  border-top: 1px solid #cf4a4a;
-  padding-inline: 2vw;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.menu-right .btn-login .backdrop .modal .modal-footer .close-modal {
-  background-color: #973220;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
   cursor: pointer;
 }
-.menu-right .btn-login .backdrop .modal .modal-footer .close-modal:hover {
-  background-color: #ff3814;
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-content form label {
+  margin-bottom: 5px;
+}
+.modal-content form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.modal-content form button {
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.modal-content form button:hover {
+  background-color: #e23333;
 }
 
 .home {
@@ -12473,7 +12497,7 @@ body {
   justify-content: star;
   width: 50%;
 }
-.slide .tiwtiwat {
+.slide .icon-p-caro {
   color: #e08282;
   font-size: x-large;
 }
@@ -12525,6 +12549,169 @@ body {
 
 .activeIndicator {
   background-color: rgba(80, 7, 7, 0.4196078431);
+}
+
+.gallerry-title {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5vh;
+}
+.gallerry-title p, .gallerry-title h2, .gallerry-title .h2 {
+  text-align: center;
+}
+.gallerry-title p span, .gallerry-title h2 span, .gallerry-title .h2 span {
+  color: #d11212;
+}
+
+.gallery {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  padding: 30vh 0;
+  max-width: 100px;
+  position: relative;
+}
+
+.gallery-item {
+  height: 140px;
+  opacity: 1;
+  position: absolute;
+  transition: all 0.4s ease in-out;
+  width: 180px;
+  background-size: contain;
+}
+
+.gallery-item-1 {
+  left: 16vw;
+  opacity: 0.9;
+  transform: translateX(-50%);
+}
+
+.gallery-item-2, .gallery-item-4 {
+  height: 160px;
+  opacity: 0.8;
+  width: 200px;
+  z-index: 1;
+}
+
+.gallery-item-2 {
+  left: 32vw;
+  transform: translateX(-50%);
+}
+
+.gallery-item-3 {
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+  height: 210px;
+  opacity: 1;
+  left: 50vw;
+  transform: translateX(-50%);
+  width: 240px;
+  z-index: 2;
+  border: 5px solid #d11212;
+}
+
+.gallery-item-4 {
+  left: 68vw;
+  transform: translateX(-50%);
+}
+
+.gallery-item-5 {
+  left: 84vw;
+  opacity: 0.9;
+  transform: translateX(-50%);
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 100px;
+}
+.gallery-controls button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0 50px;
+  padding: 0 12px;
+  text-transform: capitalize;
+}
+
+.gallery-controls-button:focus {
+  outline: none;
+}
+
+.gallery-controls-previous {
+  position: relative;
+}
+.gallery-controls-previous::before {
+  border: solid #000;
+  border-width: 0 5px 5px 0;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  left: -30vw;
+  padding: 10px;
+  position: absolute;
+  top: 25vw;
+  transform: rotate(135deg) translateY(-50%);
+  transition: left 0.3s ease in-out;
+  width: 5px;
+}
+.gallery-controls-previous:hover::before {
+  left: -40vw;
+}
+
+.gallery-controls-next {
+  position: relative;
+}
+.gallery-controls-next::before {
+  border: solid #000;
+  border-width: 0px 5px 5px 0px;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  right: -30vw;
+  padding: 10px;
+  position: absolute;
+  top: 45vw;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: right 0.3s ease in-out;
+  width: 5px;
+}
+.gallery-controls-next:hover::before {
+  right: -40vw;
+}
+
+.gallery-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+.gallery-nav {
+  background-color: #ccc;
+  border-radius: 50%;
+  height: 10px;
+  margin: 0 5px;
+  width: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.gallery-nav .active {
+  background-color: #555;
 }
 
 .table {
