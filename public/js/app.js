@@ -106,7 +106,7 @@ containers.forEach(container => {
     indicatorsGrp.querySelector(".indicator").classList.add('activeIndicator')
 });
 
-//?
+//?modal
 let modal = document.getElementById("loginModal");
 let btn = document.getElementById("loginBtn");
 let span = document.getElementsByClassName("close")[0];

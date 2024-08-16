@@ -1,11 +1,12 @@
 // 1carousel auto slide indicator
 .carousel-container 
     width: 100vw
-    height: 80vh
     background: #f2f2f2
     position: relative
     overflow: hidden
     padding-top: 10vh
+    padding-bottom: 10vh
+    padding-left: 2vw
     h1
         text-align: center
     p
@@ -26,6 +27,7 @@
     align-items: center
     justify-content: center
     gap: 4vw
+    
     .slide-left
         border-left: 2px solid #d11212
         padding: 20px
@@ -33,6 +35,8 @@
         flex-direction: column
         justify-content: star
         width: 50%
+        h5, p
+            margin: 0
     .icon-p-caro
         color:#e08282
         font-size: x-large
@@ -40,15 +44,15 @@
         color: #ffc107
 
 .slide img 
-    width: 160px
-    height: 160px
+    width: 17vw
+    height: 19vh
     border-radius: 50%
 .next,.previous 
     display: none
     padding: 1vh 2vw
     border-radius: 20px
     position: absolute
-    top: 50%
+    top: 70%
     transform: translateY(-50%)
 .next
     right:0px 
@@ -58,7 +62,9 @@
     display: none 
 .indicators-grp
     width: 100%
-    padding: 2vh 0
+    padding: 20vh 0 0 0
+    margin-top: 19vh
+    top: 25vh
     position: absolute
     bottom: 10%
     display: flex
